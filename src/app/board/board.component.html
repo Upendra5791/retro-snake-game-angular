@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="header">
+    <div class="heading">
+      <h1>Retro Snake Game</h1>
+    </div>
+    <div class="score">
+      <span>Score</span>
+      <span> {{ boardService.score }}</span>
+    </div>
+  </div>
+  <div class="board-container">
+    <div class="board">
+      <span
+        *ngFor="let cell of boardCells"
+        [id]="cell.id"
+        class="board-cell"
+        [ngClass]="{
+          hasSnake: cell.hasSnake,
+          isMeal: !!cell.hasMeal,
+          isBreakpoint: !!cell.breakpoint
+        }"
+      ></span>
+
+      <div class="screen" [ngClass]="{ show: game === 'OFF' }">
+        <div class="btn-container">
+          <p>Swipe to change direction</p>
+          <button (click)="startGame()">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <button (click)="addCell()">Add Cell</button>
+<button (click)="getMeal()">Get Meal</button> -->
