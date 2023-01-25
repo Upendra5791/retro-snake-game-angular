@@ -172,6 +172,7 @@ export class BoardComponent implements OnInit, OnDestroy {
   }
 
   public startGame(): void {
+    if (this.game === 'ON') return;
     this.resetGame();
     this.createBoard();
     this.createSnake();

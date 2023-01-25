@@ -5,10 +5,11 @@ total width for n dim = width of cell * n
 
 .container {
   position: relative;
+  margin-top: 20px;
   .header {
     height: 50px;
     width: 300px;
-    border: 1px solid rgb(44, 43, 43);
+    border: 1px solid #ffffff;
     display: flex;
     margin: 0 auto;
 
@@ -39,7 +40,7 @@ total width for n dim = width of cell * n
     height: 300px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid gray;
+    border: 1px solid #ffffff;
     background-color: rgb(44, 43, 43);
     margin: 0 auto;
     position: relative;
@@ -91,6 +92,7 @@ total width for n dim = width of cell * n
             border-radius: 50px;
             border: none;
             background: #4ab8c6;
+            cursor: pointer;
           }
       }
     }
